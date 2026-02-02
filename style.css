@@ -15,18 +15,14 @@ html {
     scroll-behavior: smooth
 }
 @supports (scrollbar-gutter: stable) {
-    html {
-        scrollbar-gutter: stable
-    }
+    html {scrollbar-gutter: stable}
+}
+@media (prefers-reduced-motion: reduce) {
+    html {scroll-behavior: smooth}
 }
 body, main {
     max-width: 100%;
-    min-height: 100vh
-}
-@supports (min-height: 100svh) {
-    body, main {
-        min-height: 100svh
-    }
+    min-height: 100svh
 }
 body {
     background-color: cornflowerblue
@@ -41,21 +37,16 @@ main {
     display: flex;
     justify-content: center
 }
-header h1, footer {
+header h1,
+footer {
     text-align: center
 }
-header h1 {
-    font-size: 40px
-}
+header h1 {font-size: 40px}
 @supports (text-wrap: balance) {
-    h1 {
-        text-wrap: balance
-    }
+    h1 {text-wrap: balance}
 }
 main #search-bar {
     padding: 1rem;
     width: 50%
 }
-#engine-options {
-    margin-left: 1rem
-}
+#engine-options {margin-left: 1rem}
