@@ -53,14 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (final_url) {
-                let msg: string | undefined = prompt(`Do you want to redirect to ${engine_options.value}?`)?.trim().toLowerCase()
-
-                if (msg === "yes") {
-                    window.location.href = final_url;
-                } else {
-                    alert("OK! Refreshing!");
-                    return;
-                }
+                window.open(
+                    final_url,
+                    undefined,
+                    "noreferrer"
+                );
             }
         }
 
